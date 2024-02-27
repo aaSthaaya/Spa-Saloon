@@ -1,0 +1,749 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto";
+    line-height: 2em;
+    background: #212529;
+}
+
+.wrapper {
+    padding: 0 5.5em;
+
+}
+
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-list-logo-bar {
+    display: none;
+}
+
+.navbar ul.nav-lists {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2.2em;
+}
+
+.nav-lists a img {
+    height: 115px;
+}
+
+ul.nav-icons {
+    display: flex;
+    gap: 2em;
+    padding-right: 3em;
+
+}
+
+ul.nav-lists li {
+    list-style: none;
+    font-size: 20px;
+    position: relative;
+
+}
+
+ul.nav-lists li::after {
+    content: '';
+    height: 2px;
+    width: 0;
+    background: #c5ab50;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+}
+
+.nav-lists li:hover::after {
+    transition: 0.5s;
+    width: 100%;
+}
+
+.nav-icons li {
+    list-style: none;
+    border: 2px solid #c5ab50;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    padding: 2px 10px;
+    cursor: pointer;
+}
+
+.nav-icons li:hover {
+    background-color: #c5ab50;
+}
+
+
+.nav-lists li a,
+.nav-icons li a {
+    text-decoration: none;
+    color: #c5ab50;
+}
+
+.nav-icons li:hover i {
+    color: #fff;
+}
+
+.banner {
+    position: relative;
+
+
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner-frame {
+    position: absolute;
+    width: 350px;
+    height: 450px;
+    border: 10px solid #c5ab50;
+    left: 9.5%;
+    top: 34%;
+    transform: translateY(-50%);
+}
+
+.tile__block {
+    position: absolute;
+    bottom: 50%;
+    left: 10%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.tile__block-top h4 {
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.tile__block-middle h1 {
+    font-size: 70px;
+    line-height: 74px;
+}
+
+.tile__block-bottom i {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.carousel-control {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: absolute;
+    right: 16px;
+    bottom: 46%;
+
+}
+
+.carousel-control-prev i,
+.carousel-control-next i {
+    background-color: #c5ac5050;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.carousel-control-prev i:hover,
+.carousel-control-next i:hover {
+    background-color: #c5ac5088;
+}
+
+.banner .box {
+    display: flex;
+    position: absolute;
+    bottom: 11px;
+    right: 0;
+
+}
+
+.box .box-item {
+    background-color: #d8bf65;
+    padding: 72px 32px;
+    cursor: pointer;
+}
+
+.box .active {
+    background-color: #c5ab50;
+}
+
+.cards {
+    margin: 50px 0;
+   
+}
+
+
+.cards-row {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    padding: 40px 0;
+    position: relative;
+    z-index: 1;
+}
+
+.card-col {
+    background-color: #c5ab50;
+    border: 1px solid #c5ab50;
+    padding: 64px 48px;
+    color: #fff;
+    width: 38.3%;
+}
+
+.card-col h4,
+.card-col i {
+    font-size: 24px;
+    padding: 16px 0;
+}
+
+.card-col p {
+    font-size: 20px;
+    color: #f3e9c5;
+}
+
+.gallary {
+    display: flex;
+    justify-content: space-around;
+    align-items: end;
+    padding-bottom: 64px;
+}
+
+.gallary h1 {
+    color: #fff;
+    font-size: 48px;
+    line-height: 60px;
+}
+
+.gallary div button {
+    padding: 16px 32px;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #c5ab50;
+    color: #fff;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+.gallary div button:hover {
+    background-color: #d8bc55;
+}
+
+.gallary-images {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding-bottom: 7em;
+    border-radius: 4px;
+}
+
+.gallary-images img {
+    border-radius: 4px;
+}
+
+.card-wrap {
+    padding: 0 18px;
+   
+}
+
+.card-wrap .cards-row {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+.card-wrap .cards-row .card-col i,
+.card-wrap .cards-row .card-col span {
+    color: #000;
+    font-size: 48px;
+}
+
+.card-wrap .cards-row .card-col span {
+    font-size: 18px;
+}
+
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    padding: 24px 0;
+}
+
+.carousel-indicators .indicator {
+    width: 10px;
+    height: 10px;
+    border: 2px solid #c5ab50;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.carousel-indicators .indicator:hover {
+    background-color: #c5ab50;
+}
+
+.service-table h1 {
+    color: #fff;
+    font-size: 48px;
+    margin: 88px 0;
+    text-align: center;
+}
+
+table,
+td,
+th {
+    border: 1px solid;
+    padding: 28px 16px;
+    font-size: 24px;
+}
+
+table {
+    margin: auto;
+    width: 80%;
+    border-collapse: collapse;
+
+}
+
+.service-table table tr td,
+.service-table table tr th {
+    border-color: #c5ab50;
+    color: #fff;
+}
+
+.service-table table tr th {
+    color: #c5ab50;
+    padding: 66px 0;
+    width: 26%;
+    font-size: 44px;
+}
+
+
+.service-table table tr td:not(:first-child) {
+    text-align: center;
+}
+
+.contact-us .image {
+    background-image: url(../IMAGE/spa8-1200x800.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    height: 650px;
+    margin: 150px 0;
+
+}
+
+.contact-us .image .contact-us-box {
+    background-color: #212529;
+    width: 74%;
+    border-bottom: 5px solid #c5ab50;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    top: 70%;
+    left: 12%;
+    padding: 48px 0;
+}
+
+.contact-us-box .email-message-request {
+    width: 60%;
+    padding: 16px 16px;
+    line-height: 62px;
+}
+
+.contact-us-box .email-message-request input {
+    border: none;
+    border-bottom: 1px solid #c5ab50;
+    background-color: #212529;
+    width: 84%;
+    line-height: 32px;
+    color: #fff;
+    font-size: 16px;
+}
+
+.contact-us-box .email-message-request input:focus {
+    outline: none;
+}
+
+.email-message-request button {
+    background-color: #c5ab50;
+    color: #fff;
+    margin-top: 16px;
+    padding: 16px 48px;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.contact-us-box .contact-details {
+    color: #fff;
+    line-height: 44px;
+    width: 40%;
+}
+
+.contact-details h4,
+.contact-details .contact-no {
+    font-size: 20px;
+
+}
+
+.contact-details h1 {
+    font-size: 48px;
+    line-height: 48px;
+}
+
+.contact-details .contact-no {
+    color: #c5ab50;
+}
+
+footer.details-top {
+    padding: 98px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 9em;
+    width: 78%;
+}
+
+footer.details-top ul li {
+    color: #fff;
+    list-style: none;
+
+}
+
+footer.details-top ul li.top {
+    font-size: 24px;
+    line-height: 78px;
+}
+
+footer.details-top ul li a {
+    text-decoration: none;
+    color: #c5ab50;
+    font-size: 17px;
+}
+
+footer.details-top ul li.above-icon {
+    line-height: 48px;
+}
+
+footer.bottom {
+    padding: 40px 24px;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    border-top: 1px solid #77757593;
+    width: 80%;
+    margin: auto;
+}
+
+footer.bottom .bottom-right {
+    display: flex;
+    gap: 16px;
+
+}
+
+footer.bottom .bottom-right p a:hover {
+    color: #c5ab50;
+    transition: 0.3s ease-in-out;
+}
+
+.bottom-right p a {
+    text-decoration: none;
+    color: #fff;
+}
+
+
+
+@media only screen and (max-width: 1105px) {
+
+    .wrapper {
+        padding: 0 2em;
+    }
+
+    .wrapper .navbar .nav-lists,
+    .wrapper .navbar .top {
+        display: none;
+    }
+
+    .nav-list-logo-bar {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .dropbtn {
+        background-color: #212529;
+        color: white;
+        font-size: 20px;
+        border: none;
+        position: relative;
+    }
+
+    .dropbtn i {
+        cursor: pointer;
+    }
+
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        background-color: #f9f9f9;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        right: 0;
+        top: 8%;
+        font-size: 20px;
+
+    }
+
+    .dropdown-content a {
+        color: #c5ab50;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown-content .bottom {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 16px;
+    }
+
+    .dropdown-content .bottom a {
+        color: #c5ab50;
+        text-decoration: none;
+
+        padding: 0;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #cecbcb
+    }
+
+    .dropdown-content .bottom a {
+        background: none;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+
+    .banner-frame {
+        max-width: 40%;
+        top: 60%;
+    }
+
+    .banner .box {
+        display: none;
+    }
+
+    .banner .tile__block {
+        bottom: 10%;
+    }
+
+    .tile__block-middle h1 {
+        font-size: 48px;
+        line-height: 44px;
+    }
+
+
+    .contact-us .image {
+        margin: 32px 0;
+
+        height: 250px;
+    }
+
+    .contact-us-box {
+        gap: 18px;
+        padding: 18px 0;
+        flex-direction: column-reverse;
+        align-items: flex-start;
+    }
+
+    .contact-us-box .email-message-request {
+        width: 100%;
+        padding: 8px 8px;
+        line-height: 42px;
+    }
+
+    .contact-us-box .email-message-request input {
+
+        width: 100%;
+        line-height: 22px;
+        font-size: 12px;
+    }
+
+    .email-message-request button {
+
+        margin-top: 12px;
+        padding: 8px 28px;
+
+        font-size: 16px;
+
+    }
+
+    .contact-us-box .contact-details {
+
+        line-height: 34px;
+        width: 100%;
+    }
+
+    .contact-details h4,
+    .contact-details .contact-no {
+        font-size: 16px;
+
+    }
+
+    .contact-details h1 {
+        font-size: 32px;
+        line-height: 32px;
+    }
+
+    footer.details-top {
+        margin-top: 370px;
+        padding: 20px 0;
+        width: 100%;
+        gap: 4em;
+    }
+
+    footer.bottom {
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+}
+
+@media only screen and (max-width: 767px) {
+
+    .banner-frame {
+        max-width: 38%;
+        height: 80%;
+        top: 54%;
+    }
+
+    .banner .tile__block {
+        top: 22%;
+    }
+
+    .tile__block-middle h1 {
+        font-size: 32px;
+    }
+
+    .carousel-control {
+        display: none;
+    }
+
+    .cards {
+        margin: 32px 0;
+    }
+
+    .cards-row {
+        flex-direction: column;
+        padding: 16px 12px;
+
+    }
+
+    .card-col {
+
+        padding: 24px 18px;
+        width: 100%;
+    }
+
+    .gallary {
+        align-items: start;
+
+        flex-direction: column;
+        gap: 20px;
+        padding: 0 18px 34px;
+    }
+
+    .gallary h1 {
+
+        font-size: 28px;
+        line-height: 40px;
+    }
+
+    .gallary div button {
+        padding: 10px 12px;
+        font-size: 15px;
+        font-weight: 600;
+    }
+
+    .gallary-images {
+        flex-direction: column;
+        gap: 16px;
+        padding: 0 18px 2em;
+    }
+
+    .gallary-images img {
+        width: 100%;
+    }
+
+    .service-table {
+        padding: 0 18px;
+    }
+
+    .service-table h1 {
+
+        font-size: 28px;
+        margin: 28px 0;
+
+    }
+
+    table,
+    td,
+    th {
+
+
+        font-size: 18px;
+    }
+
+    table {
+
+        width: 100%;
+
+
+    }
+
+    .service-table table tr th {
+
+        padding: 36px 0;
+        font-size: 28px;
+    }
+
+    footer.details-top {
+        flex-direction: column;
+        padding-left: 52px;
+
+        gap: 2em;
+        width: 100%;
+    }
+
+    footer.details-top ul li.above-icon {
+        line-height: 22px;
+    }
+
+    .above-icon {
+        padding-bottom: 22px;
+    }
+
+}
